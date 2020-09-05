@@ -8,9 +8,9 @@ typedef struct {
     int age;
     int score;
 
-} Datatype;
+} Stu;
 
 typedef struct node {
-    DataType data;
+    char data;
     struct node *next;
 } Node, *LinkList;
