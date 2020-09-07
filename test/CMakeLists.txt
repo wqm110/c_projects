@@ -1,0 +1,6 @@
+PROJECT(test)
+set(CMAKE_C_FLAGS "-std=c99")
+#CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+AUX_SOURCE_DIRECTORY(. DIR_SRCS)
+ADD_EXECUTABLE(main ${DIR_SRCS})
+#add_executable(test main.c)

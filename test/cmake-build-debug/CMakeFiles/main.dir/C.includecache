@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/admin/c_projects/test/Linear.h
+
+/Users/admin/c_projects/test/LinearL.h
+
+/Users/admin/c_projects/test/main.c
+stdio.h
+-
+stdlib.h
+-
+Linear.h
+/Users/admin/c_projects/test/Linear.h
+LinearL.h
+/Users/admin/c_projects/test/LinearL.h
+
