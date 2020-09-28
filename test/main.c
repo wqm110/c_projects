@@ -10,7 +10,7 @@
 void list_link_save(DataType stu, DataType stu2, DataType stu3) {
     //线性表的链式存储
 
-    LinkList LL = InitSeqLinkList();//建链
+    LinkList LL = InitiateLinkList();//建链
 
 }
 
@@ -32,20 +32,29 @@ void list_continue_save(DataType stu, DataType stu1, DataType stu2, DataType stu
 }
 
 int main() {
-    DataType stu, stu1, stu2, stu3, stu4, stu5, stu6, stu7, stu8;
-    stu.num = 19;
-    stu1.num = 20;
-    stu3.num = 17;
-    stu2.num, stu4.num = 21;
-    stu5.num, stu6.num = 22;
-    stu7.num, stu8.num = 23;
+//    DataType stu, stu1, stu2, stu3, stu4, stu5, stu6, stu7, stu8;
+//    stu.num = 19;
+//    stu1.num = 20;
+//    stu3.num = 17;
+//    stu2.num, stu4.num = 21;
+//    stu5.num, stu6.num = 22;
+//    stu7.num, stu8.num = 23;
 //    list_continue_save(stu, stu1, stu2, stu3, stu4, stu5, stu6, stu7, stu8);
-    //线性表的 链式存储
+//    //线性表的 链式存储
 //    list_link_save(stu, stu1, stu2);
 
 
-    LinkList head = InitSeqLinkList();
-    InsertLinkList(head, stu1, 1);
+//    LinkList head = InitiateLinkList();
+//    InsertLinkList(head, stu, 1);
+//    InsertLinkList(head, stu1, 2);
+//    InsertLinkList(head, stu2, 3);
+//    InsertLinkList(head, stu7, 4);
+//    LengthLinkList(head);
+//    LocateLinkList(head, stu8);
+//    DeleteLinkList(head,1);
+    LinkList new1 = CreateLinkList1();
+    LengthLinkList(new1);
+//    printf("name%s", new1->data.name);
     return 0;
 }
 
