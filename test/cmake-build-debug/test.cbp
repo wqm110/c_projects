@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/admin/c_projects/test/LinkList.c">
+		<Unit filename="/Users/admin/c_projects/test/LinkList_head.h">
 			<Option target="main"/>
 		</Unit>
 		<Unit filename="/Users/admin/c_projects/test/main.c">

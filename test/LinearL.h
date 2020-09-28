@@ -1,6 +1,6 @@
 //
 // Created by mac on 2020/9/5.
-// 线性表 链表//
+// 线性表的基本运算在单链表上的实现//
 //学生信息
 
 typedef struct node {
@@ -9,6 +9,8 @@ typedef struct node {
 } Node, *LinkList;      //Node 链表节点的类型
 //LinkList head;
 
+
+LinkList InitiateLinkList();
 
 /*初始化链表*/
 LinkList InitSeqLinkList() {
@@ -81,3 +83,42 @@ int LocateLinkList(LinkList head, DataType x) {
     if (p != NULL) return loc + 1;
     else return 0;
 }
+
+/*删除*/
+
+void DeleteLinkList(LinkList head, int i) {
+    //删除 表head 的第i个结点
+    Node *q;
+    if (i == 1) q = head;
+    else q = GetLinklist(head, i - 1);
+    if (q != NULL && q->next != NULL) {
+        struct node *p = q->next; //p指向待删结点
+        q->next = p->next;        //移除待删结点
+        free(p);
+    } else exit("找不到待删除的结点");
+}
+
+/**
+ * 其他运算在单链表上的实现
+ * */
+//初始化单链表
+LinkList InitiateLinkList() {
+    LinkList head;
+    head = malloc(sizeof(Node));
+    head->next = NULL;
+    return head;
+}
+/*
+ * 1.建表
+ * */
+//方法一
+
+LinkList CreateLinkList1() {
+    //通过调用 InitialLinkList 和 Insertlinkelist 实现建表算法。
+    //假定0 是输入结束标志
+    LinkList head;
+    int x, i;
+    head = InitiateLinkList();
+}
+
+

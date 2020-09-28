@@ -6,6 +6,7 @@
 #include "Linear.h"
 #include "LinearL.h"
 
+
 void list_link_save(DataType stu, DataType stu2, DataType stu3) {
     //线性表的链式存储
 

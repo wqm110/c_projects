@@ -33,7 +33,7 @@ SeqList L;
 /**
  * 线性表的基本运算
  * */
-
+/*插入*/
 SeqList InsertSeqList(SeqList L, DataType x, int i) {
     printf("I'm in Linear.h：length%d\n", L.length);
     if (L.length == Maxsize) exit(0);
@@ -48,11 +48,9 @@ SeqList InsertSeqList(SeqList L, DataType x, int i) {
     return L;
 }
 
-/**
- *
- * 删除运算
- *
- * */
+
+/*删除运算*/
+
 SeqList DeleteSeqlist(SeqList L, int i) {
     if ((i < 1) || (i > L.length)) exit("位置非法\0");
     for (int j = i; j < L.length; j++) {
@@ -63,9 +61,7 @@ SeqList DeleteSeqlist(SeqList L, int i) {
     return L;
 }
 
-/**
- * 定位
- */
+/*定位*/
 int LocateSeqlist(SeqList L, DataType x) {
     int i = 0;
     printf("要在%d中查找\n", L.length);
