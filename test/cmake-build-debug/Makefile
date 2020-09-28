@@ -123,20 +123,59 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+LinkList.o: LinkList.c.o
+
+.PHONY : LinkList.o
+
 # target to build an object file
-main.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.o
-.PHONY : main.o
+LinkList.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/LinkList.c.o
+.PHONY : LinkList.c.o
+
+LinkList.i: LinkList.c.i
+
+.PHONY : LinkList.i
 
 # target to preprocess a source file
-main.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.i
-.PHONY : main.i
+LinkList.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/LinkList.c.i
+.PHONY : LinkList.c.i
+
+LinkList.s: LinkList.c.s
+
+.PHONY : LinkList.s
 
 # target to generate assembly for a file
-main.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.s
+LinkList.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/LinkList.c.s
+.PHONY : LinkList.c.s
+
+main.o: main.c.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+
 .PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -147,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... LinkList.o"
+	@echo "... LinkList.i"
+	@echo "... LinkList.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

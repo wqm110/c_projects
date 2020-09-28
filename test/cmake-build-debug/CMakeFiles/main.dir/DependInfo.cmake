@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/admin/c_projects/test/main.c" "/Users/admin/c_projects/test/cmake-build-debug/CMakeFiles/main.dir/main.o"
+  "/Users/admin/c_projects/test/LinkList.c" "/Users/admin/c_projects/test/cmake-build-debug/CMakeFiles/main.dir/LinkList.c.o"
+  "/Users/admin/c_projects/test/main.c" "/Users/admin/c_projects/test/cmake-build-debug/CMakeFiles/main.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "Clang")
 

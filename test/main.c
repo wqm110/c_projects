@@ -40,7 +40,11 @@ int main() {
     stu7.num, stu8.num = 23;
 //    list_continue_save(stu, stu1, stu2, stu3, stu4, stu5, stu6, stu7, stu8);
     //线性表的 链式存储
-    list_link_save(stu, stu1, stu2);
+//    list_link_save(stu, stu1, stu2);
+
+
+    LinkList head = InitSeqLinkList();
+    InsertLinkList(head, stu1, 1);
     return 0;
 }
 
