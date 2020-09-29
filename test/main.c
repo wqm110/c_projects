@@ -5,6 +5,7 @@
 # include <stdlib.h>
 #include "Linear.h"
 #include "LinearL.h"
+#include "Seqstack.h"
 
 
 void list_link_save(DataType stu, DataType stu2, DataType stu3) {
@@ -52,9 +53,10 @@ int main() {
 //    LengthLinkList(head);
 //    LocateLinkList(head, stu8);
 //    DeleteLinkList(head,1);
-    LinkList new1 = CreateLinkList1();
-    LengthLinkList(new1);
+//    LinkList new1 = CreateLinkList1();
+//    LengthLinkList(new1);
 //    printf("name%s", new1->data.name);
+    InitStack(SeqStk * stk);
     return 0;
 }
 

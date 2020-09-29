@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/admin/c_projects/test/Seqstack.h">
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/Users/admin/c_projects/test/main.c">
 			<Option target="main"/>
 		</Unit>
