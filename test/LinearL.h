@@ -117,8 +117,10 @@ void DeleteLinkList(LinkList head, int i) {
  * 其他运算在单链表上的实现
  * */
 
-/*
+/**
  * 1.建表
+ * 通过实现InsertLinkList（LinkList head，int x,int i）来实现依次增大插入位置i，是新的结点链入到链表中。
+ *时间复杂度：O(n^2)
  * */
 //方法一
 
@@ -145,22 +147,89 @@ LinkList CreateLinkList1() {
 }
 
 //TODO //建表方法二
+/**
+ * 建表算法 由于每次插入都从表头开始查找 比较浪费时间。因为每次都是把新的结点链接到表尾，我们可以用一个指针指向尾结点
+ * 这样就为下一个新节点指明了插入位置。
+ * 表尾链入
+ * 时间复杂度：O(n)
+ * */
+LinkList CreateLinkList2() {
+//q是一个LinkList类型的变量，用来指示链入位置
+    LinkList head;
+    Node *q, *t;
+    int x;
 
+    head = malloc(sizeof(Node));//生成头结点
+    q = head;                   //尾指针赋初值
+    scanf("%d", &x);
+    while (x != 0) {
+        DataType new;
+        t = malloc(sizeof(Node));   //1
+        new.num = x;                //2
+        t->data = new;              //3 生成一个新结点
+        q->next = t;                  //新结点链入
+        q = t;                        //修改尾指针q，指向新的尾结点
+        scanf("%d", &x);             //读取下一个元素
+    }
+    q->next = NULL;
+    return head;
+
+}
 //TODO 建表方法三
-//TODO 删除重复结点
+/**
+ * 前插法
+ * 链表顺序与输入顺序相反
+ * 时间复杂度：O(n)
+ * */
+LinkList CreateLinkList3() {
+    LinkList head;
+    Node *p;
+    int x;
+    head = malloc(sizeof(Node));
+    head->next = NULL;
+    scanf("%d", &x);
+    while (x) {                  //输入0结束
+        p = malloc(sizeof(Node));// 1
+        DataType new3;           //2
+        new3.num = x;            //3
+        p->data = new3;          //4 新建一个结点
+        p->next = head->next;
+        head->next = p;          //前插：插入到链表的第一个结点处
+        scanf("%d", &x);
+    }
+    return head;
+}
+
+/**
+ * 删除单链表重复结点
+ * 时间复杂度：O(n^2)
+ * */
 void PurgeLinkList(LinkList head) {
     Node *p, *q, *r;
-    q = head->next;   //指示当前检查结点的位置，置其初值指向首结点
-    while (q != NULL) {
+    q = head->next;                                 //q指示当前检查结点的位置，置其初值指向首结点
+    while (q != NULL) {                             //当检查点*q不是结点时，寻找并删除它的重复结点
         p = q;                                      //工作指针p指向*q
-        while (p->next != NULL) {
-            if (p->next->data.num == q->data.num) {
-                r = p->next;
-                p->next = r->next;
+        while (p->next != NULL) {                   //若*p的后继结点存在时，将其数据域与*q数据域进行比较
+            if (p->next->data.num == q->data.num) { //若*（p->next）时*q的重复结点
+                r = p->next;                        //r 指向待删除结点
+                p->next = r->next;                  //移出结点*(p->next),p->next指向p->next的后继结点
                 free(r);
-            } else p = p->next;
+            } else p = p->next;                     //若 不是重复结点 p指向下一个结点
         }
-        q = q->next;
+        q = q->next;                                //跟新检查点
 
     }
 }
+
+/**
+ * 循环链表
+ * */
+struct {
+    DataType data;
+    struct dbnode *prior, *next;
+} dbnode;
+typedef struct dbnode *dbpointer;
+typedef dbpointer DLinkList;
+//对称性
+//p=malloc(sizeof(dbpointer));/**/
+//p=malloc(sizeof(dbnode));
