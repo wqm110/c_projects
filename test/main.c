@@ -61,8 +61,8 @@ int main() {
 /**
  * 栈的一些操作
  * */
-
-
+    SeqStk *stk;
+    stk = InitStackFull();
     Push(stk, stu1);
     ShowStack(stk);
     Push(stk, stu);

@@ -1,0 +1,8 @@
+PROJECT(Clas)
+set(CMAKE_C_FLAGS "-std=c11")
+set(CMAKE_BUILD_TYPE Debug)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+AUX_SOURCE_DIRECTORY(. DIR_SRCS)
+ADD_EXECUTABLE(main ${DIR_SRCS})#../Clas/first.c)
+#ADD_EXECUTABLE(${DIR_SRCS} )
+#add_executable(./main.c)

@@ -23,10 +23,11 @@ int InitStack(SeqStk *stk) {
     return 1;
 }
 
-SeqStk InitStackFull() {
-    SeqStk *stk;
+SeqStk * InitStackFull() {
+    printf("初始化栈。。。\n");
+    SeqStk *stk = malloc(sizeof(SeqStk));
     stk->top = 0;
-    return *stk;
+    return stk;
 }
 
 //2 判断栈空
@@ -41,6 +42,7 @@ int EmptyStack(SeqStk *stk) {
 
 //3进栈
 int Push(SeqStk *stk, DataType x) {
+    printf("pushing...\n");
     //若栈未满，元素x进栈stk中，否则提示出错信息
     if (stk->top == maxsize - 1) {   //判断栈是否满
         printf("栈已满");
@@ -84,5 +86,7 @@ void ShowStack(SeqStk *stk) {
             topData = stk->data[stk->top--];        //取出栈顶元素
             printf("%d : %d\n", stk->top, topData.num);//打印
         }
+    } else{
+        printf("空栈。\n");
     }
 }
