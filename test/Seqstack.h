@@ -23,19 +23,27 @@ int InitStack(SeqStk *stk) {
     return 1;
 }
 
+SeqStk InitStackFull() {
+    SeqStk *stk;
+    stk->top = 0;
+    return *stk;
+}
+
 //2 判断栈空
 int EmptyStack(SeqStk *stk) {
     //若栈为空，返回值1，否则返回0
-    if (stk->top == 0)
+    if (stk->top == 0) {
         return 1;
-    else return 0;
+    } else {
+        return 0;
+    }
 }
 
 //3进栈
 int Push(SeqStk *stk, DataType x) {
     //若栈未满，元素x进栈stk中，否则提示出错信息
     if (stk->top == maxsize - 1) {   //判断栈是否满
-        error("栈已满");
+        printf("栈已满");
         return 0;
     } else {
         stk->top++;                //栈未满 top+1
@@ -45,14 +53,36 @@ int Push(SeqStk *stk, DataType x) {
 }
 
 //4 出栈
-int Pull(SeqStk *stk) {
+int Pop(SeqStk *stk) {
     if (EmptyStack(stk)) {
 //        error();
-        exit("空栈");
+        printf("空栈下溢");
         return 0;
     } else {
         stk->top--;
-
         return 1;
+    }
+}
+
+//5 取出栈顶元素
+DataType GetTop(SeqStk *stk) {
+    if (EmptyStack(stk)) {
+        const DataType NULLData;
+        return NULLData;
+    } else {
+        return stk->data[stk->top];
+
+    }
+}
+
+//6 显示全部
+void ShowStack(SeqStk *stk) {
+    if (!EmptyStack(stk)) {
+        printf("show\n");
+        while (stk->top > 0) {
+            DataType topData;                       //栈顶临时变量
+            topData = stk->data[stk->top--];        //取出栈顶元素
+            printf("%d : %d\n", stk->top, topData.num);//打印
+        }
     }
 }

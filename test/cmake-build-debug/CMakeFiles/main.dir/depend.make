@@ -3,5 +3,6 @@
 
 CMakeFiles/main.dir/main.c.o: ../Linear.h
 CMakeFiles/main.dir/main.c.o: ../LinearL.h
+CMakeFiles/main.dir/main.c.o: ../Seqstack.h
 CMakeFiles/main.dir/main.c.o: ../main.c
 

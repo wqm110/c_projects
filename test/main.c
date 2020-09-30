@@ -33,15 +33,17 @@ void list_continue_save(DataType stu, DataType stu1, DataType stu2, DataType stu
 }
 
 int main() {
-//    DataType stu, stu1, stu2, stu3, stu4, stu5, stu6, stu7, stu8;
-//    stu.num = 19;
-//    stu1.num = 20;
-//    stu3.num = 17;
-//    stu2.num, stu4.num = 21;
-//    stu5.num, stu6.num = 22;
-//    stu7.num, stu8.num = 23;
+    DataType stu, stu1, stu2, stu3, stu4, stu5, stu6, stu7, stu8;
+    stu.num = 19;
+    stu1.num = 20;
+    stu3.num = 17;
+    stu2.num, stu4.num = 21;
+    stu5.num, stu6.num = 22;
+    stu7.num, stu8.num = 23;
+/**
+ * 线性表的一些基本操作
+ * */
 //    list_continue_save(stu, stu1, stu2, stu3, stu4, stu5, stu6, stu7, stu8);
-//    //线性表的 链式存储
 //    list_link_save(stu, stu1, stu2);
 
 
@@ -56,7 +58,23 @@ int main() {
 //    LinkList new1 = CreateLinkList1();
 //    LengthLinkList(new1);
 //    printf("name%s", new1->data.name);
-    InitStack(SeqStk * stk);
+/**
+ * 栈的一些操作
+ * */
+
+
+    Push(stk, stu1);
+    ShowStack(stk);
+    Push(stk, stu);
+    ShowStack(stk);
+    Push(stk, stu3);
+    ShowStack(stk);
+    Push(stk, stu3);
+    ShowStack(stk);
+    Push(stk, stu3);
+    ShowStack(stk);
+    Pop(stk);
+    ShowStack(stk);
     return 0;
 }
 

@@ -10,6 +10,10 @@
 
 /Users/admin/c_projects/test/LinearL.h
 
+/Users/admin/c_projects/test/Seqstack.h
+stdio.h
+/Users/admin/c_projects/test/stdio.h
+
 /Users/admin/c_projects/test/main.c
 stdio.h
 -
@@ -19,4 +23,6 @@ Linear.h
 /Users/admin/c_projects/test/Linear.h
 LinearL.h
 /Users/admin/c_projects/test/LinearL.h
+Seqstack.h
+/Users/admin/c_projects/test/Seqstack.h
 
