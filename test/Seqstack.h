@@ -90,3 +90,4 @@ void ShowStack(SeqStk *stk) {
         printf("空栈。\n");
     }
 }
+

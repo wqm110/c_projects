@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/Users/admin/c_projects/test/LKstack.h
+
 /Users/admin/c_projects/test/Linear.h
 
 /Users/admin/c_projects/test/LinearL.h
@@ -25,4 +27,6 @@ LinearL.h
 /Users/admin/c_projects/test/LinearL.h
 Seqstack.h
 /Users/admin/c_projects/test/Seqstack.h
+LKstack.h
+/Users/admin/c_projects/test/LKstack.h
 

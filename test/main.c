@@ -37,9 +37,9 @@ int main() {
     stu.num = 19;
     stu1.num = 20;
     stu3.num = 17;
-    stu2.num, stu4.num = 21;
-    stu5.num, stu6.num = 22;
-    stu7.num, stu8.num = 23;
+    stu2.num = 25, stu4.num = 21;
+    stu5.num = 29, stu6.num = 22;
+    stu7.num = 98, stu8.num = 23;
 /**
  * 线性表的一些基本操作
  * */
@@ -61,20 +61,44 @@ int main() {
 /**
  * 栈的一些操作
  * */
-    SeqStk *stk;
-    stk = InitStackFull();
-    Push(stk, stu1);
-    ShowStack(stk);
-    Push(stk, stu);
-    ShowStack(stk);
-    Push(stk, stu3);
-    ShowStack(stk);
-    Push(stk, stu3);
-    ShowStack(stk);
-    Push(stk, stu3);
-    ShowStack(stk);
-    Pop(stk);
-    ShowStack(stk);
+//    SeqStk *stk;
+//    stk = InitStackFull();
+//    Push(stk, stu1);
+//    ShowStack(stk);
+//    Push(stk, stu);
+//    ShowStack(stk);
+//    Push(stk, stu3);
+//    ShowStack(stk);
+//    Push(stk, stu3);
+//    ShowStack(stk);
+//    Push(stk, stu3);
+//    ShowStack(stk);
+//    Pop(stk);
+//    ShowStack(stk);
+/**
+ * 链栈的一些操作和简单应用
+ * */
+    LkStk *LS;
+    LS = InitLKStack(LS);
+//    LS = PullLKStack(LS, stu);
+//    LS = PullLKStack(LS, stu1);
+//    LS = PullLKStack(LS, stu2);
+//    LS = PopLKStack(LS);
+//    DataType t = GetTopLKStack(LS);
+//    printf("%d\n", t.num);
+    //栈的应用
+    for (char ch = 'A'; ch <= 'Z'; ch++) {
+        printf("%c\n", ch);
+        DataType new ;
+        new.num=ch;
+        LS = PullLKStack(LS,new);
+    }
+    printf("翻转前\n");
+    ViewLinkStrack(LS);
+    printf("翻转后\n");
+    LkStk * newLS = ReverseList(LS);
+    ViewLinkStrack(newLS);
+//    ReverseLKStack(LS);
     return 0;
 }
 
