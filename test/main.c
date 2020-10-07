@@ -2,11 +2,12 @@
 // Created by mac on 2020/8/19.
 //
 #include <stdio.h>
-# include <stdlib.h>
+#include <stdlib.h>
 #include "Linear.h"
 #include "LinearL.h"
 #include "Seqstack.h"
 #include "LKstack.h"
+#include "TextAnswers.h"
 
 void list_link_save(DataType stu, DataType stu2, DataType stu3) {
     //线性表的链式存储
@@ -79,7 +80,7 @@ int main() {
  * 链栈的一些操作和简单应用
  * */
     LkStk *LS;
-    LS = InitLKStack(LS);
+//    LS = InitLKStack(LS);
 //    LS = PullLKStack(LS, stu);
 //    LS = PullLKStack(LS, stu1);
 //    LS = PullLKStack(LS, stu2);
@@ -87,18 +88,24 @@ int main() {
 //    DataType t = GetTopLKStack(LS);
 //    printf("%d\n", t.num);
     //栈的应用
-    for (char ch = 'A'; ch <= 'Z'; ch++) {
-        printf("%c\n", ch);
-        DataType new ;
-        new.num=ch;
-        LS = PullLKStack(LS,new);
-    }
-    printf("翻转前\n");
-    ViewLinkStrack(LS);
-    printf("翻转后\n");
-    LkStk * newLS = ReverseList(LS);
-    ViewLinkStrack(newLS);
+//    for (char ch = 'A'; ch <= 'Z'; ch++) {
+//        printf("%c\n", ch);
+//        DataType new ;
+//        new.num=ch;
+//        LS = PullLKStack(LS,new);
+//    }
+//    printf("翻转前\n");
+//    ViewLinkStrack(LS);
+//    printf("翻转后\n");
+//    LkStk * newLS = ReverseList(LS);
+//    ViewLinkStrack(newLS);
 //    ReverseLKStack(LS);
+    //判断数字是不是素数
+//    Prime();
+    //1-2+3-4+5-...-100
+//    OneToHundred_AddAndMinus();
+    //1/2+3/4+4/5+...+99/100
+    OneToHundred_division();
     return 0;
 }
 

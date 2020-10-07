@@ -13,8 +13,8 @@
 /Users/admin/c_projects/test/LinearL.h
 
 /Users/admin/c_projects/test/Seqstack.h
-stdio.h
-/Users/admin/c_projects/test/stdio.h
+
+/Users/admin/c_projects/test/TextAnswers.h
 
 /Users/admin/c_projects/test/main.c
 stdio.h
@@ -29,4 +29,6 @@ Seqstack.h
 /Users/admin/c_projects/test/Seqstack.h
 LKstack.h
 /Users/admin/c_projects/test/LKstack.h
+TextAnswers.h
+/Users/admin/c_projects/test/TextAnswers.h
 

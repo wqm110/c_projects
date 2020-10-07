@@ -4,7 +4,6 @@
 //
 
 
-#include "stdio.h"
 
 
 #ifndef TEST_SEQSTACK_H
