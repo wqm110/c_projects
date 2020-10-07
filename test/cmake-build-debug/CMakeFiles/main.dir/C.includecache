@@ -12,6 +12,8 @@
 
 /Users/admin/c_projects/test/LinearL.h
 
+/Users/admin/c_projects/test/Queue.h
+
 /Users/admin/c_projects/test/Seqstack.h
 
 /Users/admin/c_projects/test/TextAnswers.h
@@ -31,4 +33,6 @@ LKstack.h
 /Users/admin/c_projects/test/LKstack.h
 TextAnswers.h
 /Users/admin/c_projects/test/TextAnswers.h
+Queue.h
+/Users/admin/c_projects/test/Queue.h
 

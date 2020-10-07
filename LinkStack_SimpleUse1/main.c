@@ -56,7 +56,7 @@ int main() {
 //        return 0;
 //递归
     int b = n_n_1(31);
-    printf("%d", b);
+    printf("阶乘为：%d\n", b);
 }
 
 bool EmptyStack(SeqStack *s) {

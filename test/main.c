@@ -8,6 +8,8 @@
 #include "Seqstack.h"
 #include "LKstack.h"
 #include "TextAnswers.h"
+#include "Queue.h"
+
 
 void list_link_save(DataType stu, DataType stu2, DataType stu3) {
     //线性表的链式存储
@@ -41,9 +43,9 @@ int main() {
     stu2.num = 25, stu4.num = 21;
     stu5.num = 29, stu6.num = 22;
     stu7.num = 98, stu8.num = 23;
-/**
- * 线性表的一些基本操作
- * */
+    /**
+     * 线性表的一些基本操作
+     * */
 //    list_continue_save(stu, stu1, stu2, stu3, stu4, stu5, stu6, stu7, stu8);
 //    list_link_save(stu, stu1, stu2);
 
@@ -59,9 +61,9 @@ int main() {
 //    LinkList new1 = CreateLinkList1();
 //    LengthLinkList(new1);
 //    printf("name%s", new1->data.name);
-/**
- * 栈的一些操作
- * */
+    /**
+     * 栈的一些操作
+     * */
 //    SeqStk *stk;
 //    stk = InitStackFull();
 //    Push(stk, stu1);
@@ -76,9 +78,9 @@ int main() {
 //    ShowStack(stk);
 //    Pop(stk);
 //    ShowStack(stk);
-/**
- * 链栈的一些操作和简单应用
- * */
+    /**
+     * 链栈的一些操作和简单应用
+     * */
     LkStk *LS;
 //    LS = InitLKStack(LS);
 //    LS = PullLKStack(LS, stu);
@@ -87,7 +89,9 @@ int main() {
 //    LS = PopLKStack(LS);
 //    DataType t = GetTopLKStack(LS);
 //    printf("%d\n", t.num);
-    //栈的应用
+    /**
+     * 栈的应用
+     * */
 //    for (char ch = 'A'; ch <= 'Z'; ch++) {
 //        printf("%c\n", ch);
 //        DataType new ;
@@ -100,12 +104,28 @@ int main() {
 //    LkStk * newLS = ReverseList(LS);
 //    ViewLinkStrack(newLS);
 //    ReverseLKStack(LS);
-    //判断数字是不是素数
+    /**
+     * 判断数字是不是素数
+     * */
 //    Prime();
     //1-2+3-4+5-...-100
 //    OneToHundred_AddAndMinus();
     //1/2+3/4+4/5+...+99/100
-    OneToHundred_division();
+//    OneToHundred_division();
+    /**
+     * 连续队列
+     * */
+    SeqQueue SQ;
+    SQ = InitSeQueue(SQ);
+    EmptySeQueue(SQ);
+    SQ = EnSeQueue(SQ, stu);
+    SQ = EnSeQueue(SQ, stu1);
+    SQ = EnSeQueue(SQ, stu3);
+    EmptySeQueue(SQ);
+    printf("%d\n", SQ.rear);
+    SQ = OutSeQueue(SQ);
+    printf("%d\n", SQ.rear);
+    printf("%d\n", SQ.data[SQ.rear].num);
     return 0;
 }
 
